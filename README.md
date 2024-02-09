@@ -4,46 +4,47 @@ Introduction
 Bienvenue dans le projet de scrapping en temps réel avec MongoDB. Ce projet offre deux versions distinctes pour répondre à vos besoins spécifiques. Vous pouvez choisir entre la version avec scrapping en temps réel et la version avec intégration MongoDB pour stocker les données.
 
 Instructions d'utilisation :
-Clonez le dépôt : git clone https://github.com/AurelienB20/scrap_allocine.git
-cd scrap_allocine
+Clonez le dépôt  
+executer la commande : git clone https://github.com/AurelienB20/scrap_allocine.git
+executer la commande : cd scrap_allocine
 
 Versions Disponibles
 1. Scrapping en Temps Réel
 La version avec scrapping en temps réel permet de collecter les données en temps réel à partir de différentes sources. Cette approche offre une mise à jour instantanée des informations et est idéale pour les projets nécessitant des données en temps réel.
-cd scrapping_allocine
+executer la commande : cd scrapping_allocine
 
 creation de l'image 
-docker build -t scrap_img .
+executer la commande : docker build -t scrap_img .
 
 creation du container 
-docker run --name allocine_container -p 5000:5000 -it scrap_img
+executer la commande : docker run --name allocine_container -p 5000:5000 -it scrap_img
 
 pour voir le resultat connectez vous sur votre navigateur à localhost:5000 
 
 si vous voulez stopper le conteneur sans le supprimer 
-docker stop allocine_container
+executer la commande : docker stop allocine_container
 
 et pour le relancer 
-docker start allocine_container
+executer la commande : docker start allocine_container
 
 2. Intégration MongoDB
 La version avec intégration MongoDB offre la possibilité de stocker les données scrappées dans une base de données MongoDB. Cela permet une gestion efficace des données et facilite l'analyse à long terme.
 
-cd scrapping_allocine_with_mongo
+executer la commande : cd scrapping_allocine_with_mongo
 
 creation de l'image 
-docker build -t scrap_img_with_mongo .
+executer la commande : docker build -t scrap_img_with_mongo .
 
 creation du container 
-docker run --name allocine_container_with_mongo -p 5000:5000 -it scrap_img_with_mongo
+executer la commande : docker run --name allocine_container_with_mongo -p 5000:5000 -it scrap_img_with_mongo
 
 pour voir le resultat connectez vous sur votre navigateur à localhost:5000 
 
 si vous voulez stopper le conteneur sans le supprimer 
-docker stop allocine_container_with_mongo
+executer la commande : docker stop allocine_container_with_mongo
 
 et pour le relancer 
-docker start allocine_container_with_mongo
+executer la commande : docker start allocine_container_with_mongo
 
 
 
